@@ -12,6 +12,9 @@ if __name__ == "__main__":
         Blob(color="blue", strategy_name="random"),
         Blob(color="green", strategy_name="mirror"),
         Blob(color="purple", strategy_name="rl"),
+        Blob(color="orange", strategy_name="mlp"),
+        Blob(color="black", strategy_name="lstm"),
+
     ]
     logger = DataLogger(LOG_FILE)
     world = BlobWorld(initial_blobs=blobs, logger=logger)

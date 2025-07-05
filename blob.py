@@ -1,6 +1,7 @@
 # === File: blob.py ===
 # Defines the Blob class, representing an individual entity
 from strategy import STRATEGY_CLASSES
+from config import COLORS
 
 # Counter to track IDs per color
 from collections import defaultdict
@@ -19,7 +20,9 @@ class Blob:
 
     def choose(self, opponent_color, opponent_history):
         choice, reason = self.strategy.choose(opponent_color, opponent_history)
-        print(f"{self.id} ({self.strategy_key}) chooses {choice} by {reason}")
+        color_code = COLORS.get(self.strategy_key, "")
+        reset_code = COLORS["reset"]
+        print(f"{color_code}{self.id} ({self.strategy_key}) chooses {choice} by {reason}{reset_code}")
         self.history.append((choice, reason))
         return choice
 
