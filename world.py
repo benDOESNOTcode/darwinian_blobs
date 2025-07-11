@@ -9,7 +9,7 @@ if __name__ == "__main__":
     # Initialize four blobs with different strategies
     blobs = [
         Blob(color="red", strategy_name="dominant"),
-        Blob(color="blue", strategy_name="random"),
+        #Blob(color="blue", strategy_name="random"),
         Blob(color="green", strategy_name="mirror"),
         Blob(color="purple", strategy_name="rl"),
         Blob(color="orange", strategy_name="mlp"),

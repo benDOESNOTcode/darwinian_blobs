@@ -21,3 +21,4 @@ class DataLogger:
                 blob2.id, blob2.color, blob2.strategy_key,
                 choice1, choice2, result
             ])
+
